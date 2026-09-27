@@ -1,171 +1,114 @@
 //first candidates 
 
-const candidates = [{
-cin: "AB123456",
-lastName: "Boushaba",
-firstName: "Soufiane",
-politicalParty: "Independent",
-age: 40,
-voters: []
-}];
+function showMenu() {  
+console.log("1. add a candidates");
+console.log("2. add several candidates");
+console.log("3.dispaly candidates");
+console.log("4.vote for a candidates");
+console.log("5.edit candidate");
+console.log("6.delet candidate");
+console.log("7.search candidate");
+console.log("8.statistics");
+console.log("0.Exit");
+}
+  showMenu();
+prompt("choose an option:")
 
-//add several candidates
 
 //METHODE 1 with a loop 
 
-let candidates = [];
+function showMenu() {  
+console.log("1. add a candidates");
+console.log("2. add several candidates");
+console.log("3.dispaly candidates");
+console.log("4.vote for a candidates");
+console.log("5.edit candidate");
+console.log("6.delet candidate");
+console.log("7.search candidate");
+console.log("8.statistics");
+console.log("0.Exit");
+}
+ showMenu();
 
-function addSeveralCandidates() {
+ prompt("choose an option:")
+   //if ( prompt(1)===console.log(addSeveralCandidates()));
 
-    let number = Number(prompt("How many candidates?"));
+  const candidates = [];
 
-    for (let i = 0; i < number; i++) {
+    function addSeveralCandidates() { 
 
-        let cin = prompt("Enter CIN:");
-        let lastName = prompt("Enter last name:");
-        let firstName = prompt("Enter first name:");
-        let politicalParty = prompt("Enter political party:");
-        let age = Number(prompt("Enter age:"));
+      let number = Number(prompt("How many candidates ?"));
+       for( let i = 0 ; i <number ; i ++) { 
 
-        let candidate = {
-            cin: cin,
-            lastName: lastName,
+          
+     let ID = prompt("Enter your ID :");
+     let lastName = prompt("Enter your lastName :");
+     let firstName = prompt("Enter your firstName:");
+     let politicalParty = prompt("Enter your politicaParty:");
+     let age = Number(prompt("Enter your age:"));
+   console.log(number);
+
+       let candidate = {
+            ID : ID ,
+            lastName : lastName ,
             firstName: firstName,
             politicalParty: politicalParty,
             age: age,
             voters: []
-        };
+                };
 
         candidates.push(candidate);
+      console.log(candidate)
     }
 }
+addSeveralCandidates();
+     
      
 
+//DISPLAY CANDIDATES///
+      function chooseQuestion() {
+        
+        
+        console.log( "1.displaying candidates")
+        console.log("2.sorting candidates")
+        console.log("3.filter and display specific candidates")
+      };
+           function displayCandidates() {
+             
+              let choice = prompt("choose an option:")
+           
+              if(choice==="1");
 
-//MRTHODE2///WITHOUT A LOOP 
-
-let candidates = [ 
-
-function addCandidate() {
-
-    let cin = prompt("Enter CIN:");
-    let lastName = prompt("Enter last name:");
-    let firstName = prompt("Enter first name:");
-    let politicalParty = prompt("Enter political party:");
-    let age = Number(prompt("Enter age:"));
-
-    let candidate = {
-        cin: cin,
-        lastName: lastName,
-        firstName: firstName,
-        politicalParty: politicalParty,
-        age: age,
-        voters: []
-    };
-
-    candidates.push(candidate);
-}
-
-addCandidate();
-
-console.log(candidates);
-
-//DISPLAYING CANDIDATES and sorting //////
-let candidates = [
-  
-  
-  }
-
-function displayCandidates() {
-
-   
-    let choice = prompt("Choose an option:");
-
-    
-    if (choice === "1") {
-
-        console.log("===== ALL CANDIDATES =====");
-
-        for (let candidate of candidates) {
-
-            console.log("-------------------------");
             console.log("ID:", candidate.cin);
             console.log("Last name:", candidate.lastName);
             console.log("First name:", candidate.firstName);
             console.log("Political party:", candidate.politicalParty);
             console.log("Age:", candidate.age);
             console.log("Number of votes:", candidate.voters.length);
-        }
-    }
-    else if (choice === "2") {
+               
 
-        console.log("===== CANDIDATES SORTED BY VOTES =====");
+              let existedCandidates = valid ;
+              if ( ID == candidates) { 
+                console.log(valid);
+              }
 
-        let sortedCandidates = [...candidates];
+       
+              
+              
 
-        sortedCandidates.sort(function (a, b) {
-            return b.voters.length - a.voters.length;
-        });
 
-        for (let candidate of sortedCandidates) {
+              
+            
+             
 
-            console.log("-------------------------");
-            console.log("ID:", candidate.cin);
-            console.log("Last name:", candidate.lastName);
-            console.log("First name:", candidate.firstName);
-            console.log("Political party:", candidate.politicalParty);
-            console.log("Age:", candidate.age);
-            console.log("Number of votes:", candidate.voters.length);
-        }
-    }
+                 
+     
+       
 
-    else if (choice === "3") {
 
-        let party = prompt("Enter the political party:");
 
-        let filteredCandidates = candidates.filter(function (candidate) {
-            return candidate.politicalParty === party;
-        });
 
-        console.log("===== CANDIDATES FROM " + party + " =====");
 
-        for (let candidate of filteredCandidates) {
-
-            console.log("-------------------------");
-            console.log("ID:", candidate.cin);
-            console.log("Last name:", candidate.lastName);
-            console.log("First name:", candidate.firstName);
-            console.log("Political party:", candidate.politicalParty);
-            console.log("Age:", candidate.age);
-            console.log("Number of votes:", candidate.voters.length);
-        }
-    }
-
-    else {
-        console.log("Invalid choice.");
-    }
-}
-
-displayCandidates();
+//MRTHODE2///With loop  
+///////////////////////////////////////////////////////////////////////////////////////
  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
