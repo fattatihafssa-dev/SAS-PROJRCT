@@ -213,7 +213,7 @@ function displayCandidates() {
     else if (choice === "3") {
 
         let party = prompt("Enter the politicalparty:");
-          let filteredCandidates = candidates.filter(function(candidate) {
+        let filteredCandidates = candidates.filter(function(candidate) {
 
             return candidate.politicalParty === party;
 

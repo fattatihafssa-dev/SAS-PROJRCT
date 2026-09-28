@@ -1,6 +1,5 @@
 const candidates = [];
 
-const prompt = require('prompt-sync')();
 
 // TEST CANDIDATES
 // If you want to use these candidates for testing,
@@ -40,11 +39,10 @@ function addTest() {
 
 
 // USE TEST CANDIDATES ONLY IF YOU WANT
-addTest();
+//addTest();
 
 
 function showMenu() {
-    console.log("--MAIN MENU--");
     console.log("1. add a candidates");
     console.log("2. add several candidates");
     console.log("3.dispaly candidates");
@@ -213,7 +211,7 @@ function displayCandidates() {
     else if (choice === "3") {
 
         let party = prompt("Enter the politicalparty:");
-          let filteredCandidates = candidates.filter(function(candidate) {
+        let filteredCandidates = candidates.filter(function(candidate) {
 
             return candidate.politicalParty === party;
 
